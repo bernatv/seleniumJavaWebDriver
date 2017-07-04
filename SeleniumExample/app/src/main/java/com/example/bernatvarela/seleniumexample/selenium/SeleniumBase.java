@@ -17,10 +17,6 @@ public class SeleniumBase {
         return instance;
     }
 
-    public void assertEquals(String s1, String s2) {
-        assertEquals(s1, s2);
-    }
-
     public void waitForElement(WebDriver driver, String id) {
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT);
         WebElement element =
