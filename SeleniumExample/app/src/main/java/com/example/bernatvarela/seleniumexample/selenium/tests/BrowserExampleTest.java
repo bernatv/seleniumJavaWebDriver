@@ -20,7 +20,7 @@ import static junit.framework.Assert.assertEquals;
 public class BrowserExampleTest {
     private static final String URL = "http://qaautomated.blogspot.in";
     private static final String EXPECTED = "The Art of Manual to Automation";
-    public static final String SITE_DESCRIPTIONPBT = "site-descriptionpbt";
+    private static final String SITE_DESCRIPTIONPBT = "site-descriptionpbt";
     private WebDriver driver;
     private SeleniumBase seleniumBase;
 
@@ -30,13 +30,13 @@ public class BrowserExampleTest {
         seleniumBase = SeleniumBase.getInstance();
     }
 
-    @Test public void openUrl() throws InterruptedException {
+    @Test public void pageShouldBeOpened() throws InterruptedException {
         driver.get(URL);
         WebElement webElement = driver.findElement(By.id("pagepbt"));
         Assert.assertNotNull(webElement);
     }
 
-    @Test public void checkSubtitle() throws InterruptedException {
+    @Test public void subtitleShouldBeExpected() throws InterruptedException {
         String title;
         driver.get(URL);
         WebElement webElement = seleniumBase.findByClassName(driver, SITE_DESCRIPTIONPBT);

@@ -17,7 +17,7 @@ public class SeleniumBase {
         return instance;
     }
 
-    public void waitForElement(WebDriver driver, String id) {
+    public void waitForElementByClassName(WebDriver driver, String id) {
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT);
         WebElement element =
                 wait.until(
