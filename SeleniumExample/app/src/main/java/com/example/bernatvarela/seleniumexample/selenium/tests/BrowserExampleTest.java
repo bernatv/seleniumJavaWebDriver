@@ -1,7 +1,9 @@
-package com.example.bernatvarela.seleniumexample.selenium;
+package com.example.bernatvarela.seleniumexample.selenium.tests;
 
 // Example open chrome tab with selenium chrome web driver
 // http://www.qaautomated.com/2016/04/setting-up-selenium-webdriver-in.html
+
+import com.example.bernatvarela.seleniumexample.selenium.SeleniumBase;
 
 import junit.framework.Assert;
 
@@ -12,8 +14,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import static junit.framework.Assert.assertEquals;
 
 public class BrowserExampleTest {
     private static final String URL = "http://qaautomated.blogspot.in";
@@ -36,7 +36,7 @@ public class BrowserExampleTest {
         driver.get(URL);
         WebElement webElement = driver.findElement(By.className("site-descriptionpbt"));
         title = webElement.getText();
-        assertEquals(EXPECTED, title);
+        SeleniumBase.getInstance().assertEquals(EXPECTED, title);
     }
 
     @After
