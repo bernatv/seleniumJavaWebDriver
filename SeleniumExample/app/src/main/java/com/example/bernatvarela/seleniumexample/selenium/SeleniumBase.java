@@ -25,4 +25,9 @@ public class SeleniumBase {
                                 By.className(id)
                         ));
     }
+
+    public WebElement findByClassName(WebDriver driver, String className) {
+        WebElement webElement = driver.findElement(By.className(className));
+        return webElement;
+    }
 }
