@@ -17,17 +17,31 @@ public class SeleniumBase {
         return instance;
     }
 
-    public void waitForElementByClassName(WebDriver driver, String id) {
+    public void waitForElementByClassName(WebDriver driver, String className) {
         WebDriverWait wait = new WebDriverWait(driver, TIME_OUT);
         WebElement element =
                 wait.until(
                         ExpectedConditions.visibilityOfElementLocated(
-                                By.className(id)
+                                By.className(className)
+                        ));
+    }
+
+    public void waitForElementById(WebDriver driver, String id) {
+        WebDriverWait wait = new WebDriverWait(driver, TIME_OUT);
+        WebElement element =
+                wait.until(
+                        ExpectedConditions.visibilityOfElementLocated(
+                                By.id(id)
                         ));
     }
 
     public WebElement findByClassName(WebDriver driver, String className) {
         WebElement webElement = driver.findElement(By.className(className));
+        return webElement;
+    }
+
+    public WebElement findById(WebDriver driver, String id) {
+        WebElement webElement = driver.findElement(By.id(id));
         return webElement;
     }
 }
