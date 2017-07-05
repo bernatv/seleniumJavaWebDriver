@@ -1,7 +1,7 @@
 package com.example.bernatvarela.seleniumexample.selenium.tests;
 
 // Example open chrome tab with selenium chrome web driver
-// http://demoqa.com/
+// http://www.phptravels.net/    demo site
 
 import com.example.bernatvarela.seleniumexample.selenium.SeleniumBase;
 import com.example.bernatvarela.seleniumexample.selenium.pages.HomePage;
